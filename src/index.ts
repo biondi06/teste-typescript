@@ -59,20 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // Valida o formulário
           hideError();
           if (validateForm(name, email, date, time, service)) {
-              // Aqui você pode enviar os dados para um servidor via fetch ou axios
-              // Exemplo:
-              // fetch('/api/appointments', {
-              //     method: 'POST',
-              //     headers: {
-              //         'Content-Type': 'application/json'
-              //     },
-              //     body: JSON.stringify({ name, email, date, time, service, notes })
-              // })
-              // .then(response => response.json())
-              // .then(data => {
-              //     console.log(data);
-              // });
-
+              // Simula um envio bem-sucedido
               // Redireciona para a página de agradecimento
               window.location.href = 'thank-you.html';
           }
