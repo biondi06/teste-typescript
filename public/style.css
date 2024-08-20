@@ -1,124 +1,145 @@
-
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000000; /* Fundo preto para o corpo */
-    color: #FFFF00; /* Texto amarelo para contraste */
+    background-color: #000000; 
+    color: #FFFF00; 
+    line-height: 1.6;
 }
 
 .header {
     text-align: center;
     padding: 20px;
-    background-color: #FFFF00; /* Fundo amarelo para o cabeçalho */
-    color: #000000; /* Texto preto no cabeçalho */
-    border-bottom: 4px solid #000000; /* Borda preta para destaque */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave no cabeçalho */
+    background-color: #FFFF00; 
+    color: #000000; 
+    border-bottom: 4px solid #000000; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
 .header h1 {
     margin: 0;
-    font-size: 2.5em; /* Tamanho de fonte maior para o título */
+    font-size: 2.5em; 
 }
+
 
 .main-container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #000000; /* Fundo preto para o contêiner principal */
-    color: #FFFF00; /* Texto amarelo */
-    border-radius: 12px; /* Bordas arredondadas para um visual mais moderno */
-    box-shadow: 0 0 20px rgba(255, 255, 0, 0.5); /* Sombra amarela mais intensa */
+    background-color: #1e1e1e; 
+    color: #FFFF00; 
+    border-radius: 12px; 
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
 
 .form-container {
-    background-color: #FFFFFF; /* Fundo branco para o formulário */
+    background: linear-gradient(135deg, #FFFFFF 0%, #F7F7F7 100%); 
     padding: 20px;
-    border-radius: 8px;
-    border: 2px solid #FFFF00; /* Borda amarela para o contêiner do formulário */
-    color: #000000; /* Texto preto dentro do formulário */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve ao redor do formulário */
-    transition: transform 0.3s, box-shadow 0.3s; /* Animação de transformação e sombra */
+    border-radius: 12px;
+    border: 2px solid #FFFF00; 
+    color: #000000; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    width: 100%; 
+    max-width: 600px; 
+    box-sizing: border-box; 
 }
 
 .form-container:hover {
-    transform: scale(1.02); /* Leve aumento no tamanho ao passar o mouse */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais forte ao passar o mouse */
+    transform: scale(1.03); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); 
 }
+
 
 h2 {
     margin-top: 0;
-    color: #000000; /* Título em preto */
-    font-size: 1.8em; /* Tamanho de fonte maior para os títulos */
+    color: #000000; 
+    font-size: 2em; 
+    text-align: center; 
+    background: -webkit-linear-gradient(#FFD700, #FF6347); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background: linear-gradient(#FFD700, #FF6347); 
+    background-clip: text; 
+    font-weight: bold; 
 }
+
 
 label {
     display: block;
     margin-bottom: 8px;
-    color: #000000; /* Rótulos em preto */
-    font-weight: bold; /* Rótulos em negrito */
+    color: #000000; 
+    font-weight: bold; 
+    font-size: 1.1em; 
 }
 
 input[type="text"], input[type="email"], input[type="date"], input[type="time"], select, textarea {
-    width: 100%;
+    width: calc(100% - 24px); 
     padding: 12px;
     margin-bottom: 12px;
-    border: 1px solid #FFFF00; /* Borda amarela */
-    border-radius: 4px;
-    background-color: #FFFFFF; /* Fundo branco para campos */
-    color: #000000; /* Texto preto nos campos */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Animação de borda e sombra */
+    border: 2px solid #000000; 
+    border-radius: 8px; 
+    background-color: #FFFFFF; 
+    color: #000000; 
+    font-size: 1em; 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+    box-sizing: border-box; 
 }
 
 input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus, input[type="time"]:focus, select:focus, textarea:focus {
-    border-color: #FFD700; /* Amarelo mais intenso ao focar no campo */
-    box-shadow: 0 0 8px rgba(255, 215, 0, 0.6); /* Sombra amarela ao focar */
-    outline: none; /* Remove o contorno padrão do navegador */
+    border-color: #FFD700;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.6); 
+    outline: none; 
 }
 
 textarea {
-    height: 120px; /* Altura maior para áreas de texto */
+    height: 120px; 
+    resize: vertical; 
 }
 
 .btn {
-    background-color: #FFFF00; /* Fundo amarelo para o botão */
-    color: #000000; /* Texto preto no botão */
+    background-color: #FFFF00; 
+    color: #000000; 
     border: none;
     padding: 12px 24px;
     cursor: pointer;
-    border-radius: 4px;
-    font-weight: bold; /* Texto em negrito para destaque */
-    transition: background-color 0.3s, transform 0.3s; /* Animação de cor e transformação */
+    border-radius: 8px; 
+    font-weight: bold; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    font-size: 1.1em; 
+    display: block;
+    margin: 20px auto; 
+    text-transform: uppercase; 
 }
 
 .btn:hover {
-    background-color: #FFD700; /* Amarelo mais escuro ao passar o mouse */
-    transform: scale(1.05); /* Aumento sutil ao passar o mouse */
+    background-color: #FFD700; 
+    transform: scale(1.05); 
 }
 
 .footer {
     text-align: center;
     padding: 12px;
-    background-color: #FFFF00; /* Fundo amarelo para o rodapé */
-    color: #000000; /* Texto preto no rodapé */
-    border-top: 4px solid #000000; /* Borda preta para o rodapé */
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave no rodapé */
+    background-color: #FFFF00; 
+    color: #000000; 
+    border-top: 4px solid #000000; 
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); 
 }
 
-/* Estilos para a mensagem de erro */
 .error-message {
-    color: #FF0000; /* Texto vermelho para mensagens de erro */
+    color: #FF0000; 
     margin-bottom: 15px;
-    display: none; /* Oculta a mensagem por padrão */
-    font-weight: bold; /* Mensagens de erro em negrito */
-    animation: fadeIn 0.5s; /* Animação para exibir a mensagem de erro */
+    display: none; 
+    font-weight: bold; 
+    animation: fadeIn 0.5s ease;
 }
 
 .error-message.visible {
-    display: block; /* Exibe a mensagem quando há um erro */
+    display: block; 
 }
-
-/* Animação para mensagens de erro */
 @keyframes fadeIn {
     from {
         opacity: 0;
