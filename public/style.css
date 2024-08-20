@@ -1,79 +1,129 @@
+
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #000000; /* Fundo preto para o corpo */
+    color: #FFFF00; /* Texto amarelo para contraste */
 }
 
 .header {
     text-align: center;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #FFFF00; /* Fundo amarelo para o cabeçalho */
+    color: #000000; /* Texto preto no cabeçalho */
+    border-bottom: 4px solid #000000; /* Borda preta para destaque */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave no cabeçalho */
 }
 
 .header h1 {
     margin: 0;
+    font-size: 2.5em; /* Tamanho de fonte maior para o título */
 }
 
 .main-container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
+    background-color: #000000; /* Fundo preto para o contêiner principal */
+    color: #FFFF00; /* Texto amarelo */
+    border-radius: 12px; /* Bordas arredondadas para um visual mais moderno */
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.5); /* Sombra amarela mais intensa */
 }
 
 .form-container {
-    background-color: #fff;
+    background-color: #FFFFFF; /* Fundo branco para o formulário */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #FFFF00; /* Borda amarela para o contêiner do formulário */
+    color: #000000; /* Texto preto dentro do formulário */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve ao redor do formulário */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animação de transformação e sombra */
+}
+
+.form-container:hover {
+    transform: scale(1.02); /* Leve aumento no tamanho ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais forte ao passar o mouse */
 }
 
 h2 {
     margin-top: 0;
+    color: #000000; /* Título em preto */
+    font-size: 1.8em; /* Tamanho de fonte maior para os títulos */
 }
 
 label {
     display: block;
     margin-bottom: 8px;
+    color: #000000; /* Rótulos em preto */
+    font-weight: bold; /* Rótulos em negrito */
 }
 
 input[type="text"], input[type="email"], input[type="date"], input[type="time"], select, textarea {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #FFFF00; /* Borda amarela */
     border-radius: 4px;
+    background-color: #FFFFFF; /* Fundo branco para campos */
+    color: #000000; /* Texto preto nos campos */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Animação de borda e sombra */
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus, input[type="time"]:focus, select:focus, textarea:focus {
+    border-color: #FFD700; /* Amarelo mais intenso ao focar no campo */
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.6); /* Sombra amarela ao focar */
+    outline: none; /* Remove o contorno padrão do navegador */
 }
 
 textarea {
-    height: 100px;
+    height: 120px; /* Altura maior para áreas de texto */
 }
 
 .btn {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #FFFF00; /* Fundo amarelo para o botão */
+    color: #000000; /* Texto preto no botão */
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     cursor: pointer;
     border-radius: 4px;
+    font-weight: bold; /* Texto em negrito para destaque */
+    transition: background-color 0.3s, transform 0.3s; /* Animação de cor e transformação */
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #FFD700; /* Amarelo mais escuro ao passar o mouse */
+    transform: scale(1.05); /* Aumento sutil ao passar o mouse */
 }
 
 .footer {
     text-align: center;
-    padding: 10px;
-    background-color: #f4f4f4;
+    padding: 12px;
+    background-color: #FFFF00; /* Fundo amarelo para o rodapé */
+    color: #000000; /* Texto preto no rodapé */
+    border-top: 4px solid #000000; /* Borda preta para o rodapé */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave no rodapé */
 }
 
 /* Estilos para a mensagem de erro */
 .error-message {
-    color: red;
+    color: #FF0000; /* Texto vermelho para mensagens de erro */
     margin-bottom: 15px;
     display: none; /* Oculta a mensagem por padrão */
+    font-weight: bold; /* Mensagens de erro em negrito */
+    animation: fadeIn 0.5s; /* Animação para exibir a mensagem de erro */
 }
 
 .error-message.visible {
     display: block; /* Exibe a mensagem quando há um erro */
+}
+
+/* Animação para mensagens de erro */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
