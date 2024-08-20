@@ -1,7 +1,7 @@
 {
-  "name": "projeto-teste",
+  "name": "barbearia-agendamento",
   "version": "1.0.0",
-  "description": "Um projeto front-end básico com TypeScript",
+  "description": "Site para agendamento de horários em uma barbearia",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",

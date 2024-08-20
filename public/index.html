@@ -1,12 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Projeto TypeScript</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Horário - Barbearia</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Olá, Mundo!</h1>
-  <script src="../dist/index.js"></script>
+
+    <header class="header">
+        <h1>Barbearia Estilo & Elegância</h1>
+        <p>Agende seu horário com facilidade!</p>
+    </header>
+
+    <main class="main-container">
+        <div class="form-container">
+            <h2>Agendamento de Horário</h2>
+            <form id="appointment-form" class="appointment-form">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu nome" required><br>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Ex: exemplo@dominio.com" required><br>
+                <label for="date">Data</label>
+                <input type="date" id="date" name="date" required><br>
+                <label for="time">Hora</label>
+                <input type="time" id="time" name="time" required><br>
+                <label for="service">Serviço</label>
+                <select id="service" name="service" required>
+                    <option value="">Selecione...</option>
+                    <option value="corte">Corte de Cabelo</option>
+                    <option value="barba">Barba</option>
+                    <option value="corte-barba">Corte e Barba</option>
+                    <option value="outro">Outro</option>
+                </select><br>
+                <textarea id="notes" name="notes" placeholder="Observações (opcional)"></textarea>
+                <div class="form-actions">
+                    <input class="btn" type="submit" value="Agendar">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Barbearia Estilo & Elegância. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="dist/index.js"></script>
+
 </body>
 </html>
